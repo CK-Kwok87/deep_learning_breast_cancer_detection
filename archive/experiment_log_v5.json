@@ -1,0 +1,86 @@
+exper{
+  "seed": 42,
+  "img_size": [
+    224,
+    224
+  ],
+  "batch_size": 16,
+  "baseline_epochs": 20,
+  "transfer_stage1_epochs": 10,
+  "transfer_stage2_epochs": 15,
+  "transfer_stage3_epochs": 15,
+  "learning_rate_baseline": 0.001,
+  "learning_rate_transfer_stage1": 0.0001,
+  "learning_rate_transfer_stage2": 1e-05,
+  "learning_rate_transfer_stage3": 1e-06,
+  "dropout_rate": 0.6,
+  "augmentation": {
+    "rotation_range": 10,
+    "width_shift_range": 0.1,
+    "height_shift_range": 0.1,
+    "horizontal_flip": true,
+    "brightness_range": [
+      0.9,
+      1.1
+    ],
+    "zoom_range": 0.1
+  },
+  "iteration": "Iteration 5 (ResNet50 + LR Scheduler + High Regularization)",
+  "log_filename": "experiment_log_v5.json",
+  "experiment_date": "20260312_150539",
+  "class_weights": {
+    "0": 0.8508615567439097,
+    "1": 1.212531752751905
+  },
+  "n_train_patients": 1966,
+  "n_val_patients": 492,
+  "n_train_samples": 2277,
+  "n_val_samples": 587,
+  "n_test_samples": 704,
+  "baseline_best_val_auc": 0.5,
+  "transfer_backbone": "ResNet50",
+  "transfer_total_params": 24145281,
+  "transfer_stage1_best_val_auc": 0.5731884241104126,
+  "transfer_stage2_best_val_auc": 0.6677505970001221,
+  "transfer_stage3_best_val_auc": 0.5928327441215515,
+  "baseline_threshold": Infinity,
+  "transfer_threshold": 0.5963541269302368,
+  "test_results": {
+    "baseline": {
+      "accuracy": 0.6079545454545454,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "auc": 0.5036231884057971,
+      "confusion_matrix": [
+        [
+          428,
+          0
+        ],
+        [
+          276,
+          0
+        ]
+      ]
+    },
+    "transfer": {
+      "accuracy": 0.5809659090909091,
+      "precision": 0.4549763033175355,
+      "recall": 0.34782608695652173,
+      "specificity": 0.7313084112149533,
+      "f1": 0.3942505133470226,
+      "auc": 0.5583096302316132,
+      "confusion_matrix": [
+        [
+          313,
+          115
+        ],
+        [
+          180,
+          96
+        ]
+      ]
+    }
+  }
+}

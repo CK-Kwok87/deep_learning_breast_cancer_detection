@@ -1,0 +1,86 @@
+{
+  "seed": 42,
+  "img_size": [
+    320,
+    320
+  ],
+  "batch_size": 12,
+  "baseline_epochs": 20,
+  "transfer_stage1_epochs": 10,
+  "transfer_stage2_epochs": 15,
+  "transfer_stage3_epochs": 15,
+  "learning_rate_baseline": 0.001,
+  "learning_rate_transfer_stage1": 0.0001,
+  "learning_rate_transfer_stage2": 1e-05,
+  "learning_rate_transfer_stage3": 1e-06,
+  "dropout_rate": 0.6,
+  "augmentation": {
+    "rotation_range": 10,
+    "width_shift_range": 0.1,
+    "height_shift_range": 0.1,
+    "horizontal_flip": true,
+    "brightness_range": [
+      0.9,
+      1.1
+    ],
+    "zoom_range": 0.1
+  },
+  "iteration": "Iteration 7 (VGG16 + 320x320 + Precision Feature Extraction)",
+  "log_filename": "experiment_log_v7.json",
+  "experiment_date": "20260312_231339",
+  "class_weights": {
+    "0": 0.8508615567439097,
+    "1": 1.212531752751905
+  },
+  "n_train_patients": 1966,
+  "n_val_patients": 492,
+  "n_train_samples": 2277,
+  "n_val_samples": 587,
+  "n_test_samples": 704,
+  "baseline_best_val_auc": 0.5337778329849243,
+  "transfer_backbone": "VGG16",
+  "transfer_total_params": 14879041,
+  "transfer_stage1_best_val_auc": 0.7130312919616699,
+  "transfer_stage2_best_val_auc": 0.7821642160415649,
+  "transfer_stage3_best_val_auc": 0.7926074862480164,
+  "baseline_threshold": 0.5122561454772949,
+  "transfer_threshold": 0.49062687158584595,
+  "test_results": {
+    "baseline": {
+      "accuracy": 0.5795454545454546,
+      "precision": 0.4732620320855615,
+      "recall": 0.6413043478260869,
+      "specificity": 0.5397196261682243,
+      "f1": 0.5446153846153846,
+      "auc": 0.5920611540024381,
+      "confusion_matrix": [
+        [
+          231,
+          197
+        ],
+        [
+          99,
+          177
+        ]
+      ]
+    },
+    "transfer": {
+      "accuracy": 0.6264204545454546,
+      "precision": 0.5142857142857142,
+      "recall": 0.8478260869565217,
+      "specificity": 0.48364485981308414,
+      "f1": 0.640218878248974,
+      "auc": 0.7248408506027361,
+      "confusion_matrix": [
+        [
+          207,
+          221
+        ],
+        [
+          42,
+          234
+        ]
+      ]
+    }
+  }
+}

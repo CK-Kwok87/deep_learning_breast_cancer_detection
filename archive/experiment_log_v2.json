@@ -1,0 +1,81 @@
+{
+  "seed": 42,
+  "img_size": [
+    224,
+    224
+  ],
+  "batch_size": 16,
+  "baseline_epochs": 20,
+  "transfer_stage1_epochs": 20,
+  "transfer_stage2_epochs": 10,
+  "learning_rate_baseline": 0.001,
+  "learning_rate_transfer_stage1": 0.001,
+  "learning_rate_transfer_stage2": 0.0001,
+  "dropout_rate": 0.5,
+  "augmentation": {
+    "rotation_range": 10,
+    "width_shift_range": 0.1,
+    "height_shift_range": 0.1,
+    "horizontal_flip": true,
+    "brightness_range": [
+      0.9,
+      1.1
+    ],
+    "zoom_range": 0.1
+  },
+  "experiment_date": "20260311_135902",
+  "class_weights": {
+    "0": 0.8508615567439097,
+    "1": 1.212531752751905
+  },
+  "n_train_patients": 1966,
+  "n_val_patients": 492,
+  "n_train_samples": 2277,
+  "n_val_samples": 587,
+  "n_test_samples": 704,
+  "baseline_best_val_auc": 0.6700888872146606,
+  "transfer_backbone": "EfficientNetB0",
+  "transfer_total_params": 4410532,
+  "transfer_stage1_best_val_auc": 0.5,
+  "transfer_stage2_best_val_auc": 0.5122275352478027,
+  "baseline_threshold": 0.5136159062385559,
+  "transfer_threshold": 0.5009335279464722,
+  "test_results": {
+    "baseline": {
+      "accuracy": 0.6051136363636364,
+      "precision": 0.4971751412429379,
+      "recall": 0.6376811594202898,
+      "specificity": 0.5841121495327103,
+      "f1": 0.5587301587301587,
+      "auc": 0.6226381552214547,
+      "confusion_matrix": [
+        [
+          250,
+          178
+        ],
+        [
+          100,
+          176
+        ]
+      ]
+    },
+    "transfer": {
+      "accuracy": 0.5482954545454546,
+      "precision": 0.438953488372093,
+      "recall": 0.5471014492753623,
+      "specificity": 0.5490654205607477,
+      "f1": 0.4870967741935484,
+      "auc": 0.5438211093051605,
+      "confusion_matrix": [
+        [
+          235,
+          193
+        ],
+        [
+          125,
+          151
+        ]
+      ]
+    }
+  }
+}

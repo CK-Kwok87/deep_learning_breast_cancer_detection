@@ -1,0 +1,86 @@
+{
+  "seed": 42,
+  "img_size": [
+    224,
+    224
+  ],
+  "batch_size": 16,
+  "baseline_epochs": 20,
+  "transfer_stage1_epochs": 10,
+  "transfer_stage2_epochs": 10,
+  "transfer_stage3_epochs": 10,
+  "learning_rate_baseline": 0.001,
+  "learning_rate_transfer_stage1": 0.0001,
+  "learning_rate_transfer_stage2": 1e-05,
+  "learning_rate_transfer_stage3": 1e-06,
+  "dropout_rate": 0.5,
+  "augmentation": {
+    "rotation_range": 10,
+    "width_shift_range": 0.1,
+    "height_shift_range": 0.1,
+    "horizontal_flip": true,
+    "brightness_range": [
+      0.9,
+      1.1
+    ],
+    "zoom_range": 0.1
+  },
+  "iteration": "Iteration 4 (Deep Fine-Tuning + Preprocessing Fix)",
+  "log_filename": "experiment_log_v4.json",
+  "experiment_date": "20260311_232456",
+  "class_weights": {
+    "0": 0.8508615567439097,
+    "1": 1.212531752751905
+  },
+  "n_train_patients": 1966,
+  "n_val_patients": 492,
+  "n_train_samples": 2277,
+  "n_val_samples": 587,
+  "n_test_samples": 704,
+  "baseline_best_val_auc": 0.5,
+  "transfer_backbone": "EfficientNetB0",
+  "transfer_total_params": 4410532,
+  "transfer_stage1_best_val_auc": 0.5,
+  "transfer_stage2_best_val_auc": 0.5628730058670044,
+  "transfer_stage3_best_val_auc": 0.5956582427024841,
+  "baseline_threshold": 0.5044757127761841,
+  "transfer_threshold": 0.43279868364334106,
+  "test_results": {
+    "baseline": {
+      "accuracy": 0.38920454545454547,
+      "precision": 0.38872832369942195,
+      "recall": 0.9746376811594203,
+      "specificity": 0.011682242990654205,
+      "f1": 0.5557851239669421,
+      "auc": 0.42715528917784096,
+      "confusion_matrix": [
+        [
+          5,
+          423
+        ],
+        [
+          7,
+          269
+        ]
+      ]
+    },
+    "transfer": {
+      "accuracy": 0.47017045454545453,
+      "precision": 0.4170940170940171,
+      "recall": 0.8840579710144928,
+      "specificity": 0.20327102803738317,
+      "f1": 0.5667828106852497,
+      "auc": 0.5027851144521197,
+      "confusion_matrix": [
+        [
+          87,
+          341
+        ],
+        [
+          32,
+          244
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,26 @@
+# Models & Large Binaries
+*.keras
+checkpoints/
+
+# Data & Results
+jpeg/
+# (Keeping archive/ to include result plots and CSV logs)
+
+# Unrelated Utility Scripts (as requested)
+add_training_cells.py
+apply_oom_fixes.py
+fix_img_size.py
+fix_oom.py
+quick_fix_colab.py
+generate_missing_confusion_matrices.py
+mlnn.linux/
+
+# Python/Notebook
+__pycache__/
+.ipynb_checkpoints/
+.python-version
+
+# System
+.DS_Store
+Thumbs.db
+desktop.ini
